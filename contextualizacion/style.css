@@ -1,0 +1,17 @@
+/* ejercicio 1 */
+.boton {
+  background-color: rgb(226, 44, 80);
+}
+.boton:hover {
+  background-color: rgb(161, 161, 247);
+}
+/* ejercicio 2 */
+.parrafo::first-letter {
+  font-size: 40px;
+  font-family: sans-serif;
+  color: rgb(231, 9, 220);
+}
+/* ejercicio 3 */
+.encabezado::before {
+  content: "💗";
+}
