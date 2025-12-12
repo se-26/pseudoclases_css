@@ -80,7 +80,7 @@ body {
 /* Header con imagen de fondo */
 header {
     background-image: linear-gradient(rgba(241, 9, 9, 0.7), rgba(14, 14, 14, 0.8)), 
-                      url('../imagenes/elfen lied.jpg');
+                      url('./imagenes/elfen\ lied.jpg');
     background-size: contain;
     background-position: center;
     background-attachment: fixed;
