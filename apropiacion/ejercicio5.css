@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Estilos de la tarjeta */
+.tarjeta {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Pseudoclase :hover en la tarjeta */
+.tarjeta:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Pseudoelemento ::before - Decoración superior izquierda */
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #f39c12, #e74c3c);
+    border-radius: 50%;
+    opacity: 0.15;
+    transition: all 0.4s ease;
+}
+
+.tarjeta:hover::before {
+    transform: scale(1.3);
+    opacity: 0.25;
+}
+
+/* Pseudoelemento ::after - Decoración inferior derecha */
+.tarjeta::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    border-radius: 50%;
+    opacity: 0.15;
+    transition: all 0.4s ease;
+}
+
+.tarjeta:hover::after {
+    transform: scale(1.3);
+    opacity: 0.25;
+}
+
+/* Estilos del título */
+.titulo {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Pseudoelemento ::before en el título */
+.titulo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #f39c12, #e67e22);
+    border-radius: 3px;
+}
+
+/* Estilos del párrafo */
+.parrafo {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Estilos del botón */
+.boton {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Pseudoclase :hover en el botón */
+.boton:hover {
+    background: #2ecc71;
+    transform: scale(1.08);
+    box-shadow: 0 6px 25px rgba(46, 204, 113, 0.4);
+}
+
+/* Pseudoclase :active en el botón */
+.boton:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(46, 204, 113, 0.4);
+}
+
+/* Pseudoclase :focus en el botón */
+.boton:focus {
+    outline: 3px solid #e67e22;
+    outline-offset: 3px;
+}
+
+/* Sección de explicación */
+.explicacion {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.explicacion h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.explicacion h3 {
+    color: #34495e;
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.explicacion p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.explicacion p strong {
+    color: #2c3e50;
+}

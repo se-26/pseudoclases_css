@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 5 - Tarjeta Interactiva</title>
+    <link rel="stylesheet" href="ejercicio5.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="tarjeta">
+            <h2 class="titulo">Aprendiendo CSS Avanzado</h2>
+            <p class="parrafo">
+                Esta tarjeta combina pseudoclases y pseudoelementos para crear una experiencia interactiva y visualmente atractiva. Explora cada detalle y observa cómo responde a tus interacciones.
+            </p>
+            <button class="boton">Explorar más</button>
+        </div>
+
+        <div class="explicacion">
+            <h2>Decisiones de diseño tomadas:</h2>
+            
+            <h3>Pseudoelementos utilizados:</h3>
+            <p><strong>::before en la tarjeta:</strong> Agregué un círculo decorativo en la esquina superior izquierda con un degradado de colores. Esto le da un toque moderno y dinámico sin necesidad de agregar elementos HTML adicionales.</p>
+            
+            <p><strong>::after en la tarjeta:</strong> Coloqué otro círculo decorativo en la esquina inferior derecha, creando un balance visual y simetría en el diseño.</p>
+            
+            <p><strong>::before en el título:</strong> Inserté una línea vertical dorada a la izquierda del título para dar jerarquía y destacarlo del resto del contenido.</p>
+
+            <h3>Pseudoclases utilizadas:</h3>
+            <p><strong>:hover en la tarjeta:</strong> Cuando pasas el mouse sobre la tarjeta, esta se eleva ligeramente y su sombra se intensifica. Esto crea una sensación de profundidad y hace que la tarjeta parezca "flotar".</p>
+            
+            <p><strong>:hover en el botón:</strong> El botón cambia de color azul a verde, se expande un poco y muestra una sombra. Esto indica claramente al usuario que puede hacer clic.</p>
+            
+            <p><strong>:active en el botón:</strong> Al presionar el botón, este se reduce momentáneamente, simulando el efecto de presionar un botón físico.</p>
+            
+            <p><strong>:focus en el botón:</strong> Cuando el botón recibe el foco (por ejemplo, al usar Tab para navegar), aparece un borde naranja que mejora la accesibilidad.</p>
+
+            <h3>¿Por qué estas decisiones?</h3>
+            <p>Elegí usar pseudoelementos para las decoraciones porque quería mantener el HTML limpio y simple. Los círculos decorativos añaden interés visual sin saturar el diseño.</p>
+            
+            <p>Las pseudoclases fueron fundamentales para crear una experiencia interactiva. El efecto hover en la tarjeta invita a explorar, mientras que las interacciones del botón proporcionan retroalimentación inmediata al usuario.</p>
+            
+            <p>Utilicé transiciones suaves (transition) para que todos los cambios se sientan naturales y fluidos, evitando cambios bruscos que podrían resultar incómodos.</p>
+        </div>
+    </div>
+</body>
+</html>

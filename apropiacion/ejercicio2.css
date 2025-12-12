@@ -6,14 +6,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background: linear-gradient(135deg, #e60b0b 0%, #0c0c0c 100%);
     padding: 40px;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background: white;
+    background: rgb(237, 182, 182);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -33,49 +33,52 @@ h1 {
 .lista li {
     padding: 15px;
     margin-bottom: 10px;
-    background-color: #ecf0f1;
+    background-color: #e3e5f4;
     border-radius: 5px;
     font-size: 18px;
 }
 
 /* :first-child - Selecciona el primer elemento */
 .lista li:first-child {
-    background-color: #fff3cd;
-    color: #e74c3c;
+    background-color: #e98e7b;
+    color: #ee1901;
     font-weight: bold;
-    border: 2px solid #e74c3c;
+    border: 2px solid #f12727;
+    box-shadow: #e94787 0 0 30px;
 }
 
 /* :last-child - Selecciona el último elemento */
 .lista li:last-child {
-    background-color: #d1ecf1;
-    color: #27ae60;
+    background-color: #ade2ec;
+    color: #038037;
     font-weight: bold;
-    border: 2px solid #27ae60;
+    border: 2px solid #2aac60;
+    box-shadow: #5bed17 0 0 30px;
 }
 
 /* :nth-child(3) - Selecciona el tercer elemento */
 .lista li:nth-child(3) {
-    background-color: #e8daef;
-    color: #8e44ad;
+    background-color: #daaff0;
+    color: #4b0768;
     font-weight: bold;
     border: 2px solid #8e44ad;
+    box-shadow: #654672 0 0 30px;
 }
 
 .analisis {
-    background-color: #f8f9fa;
+    background-color: #feffff;
     padding: 20px;
     border-radius: 5px;
-    border-left: 4px solid #3498db;
+    border-left: 4px solid #3f0366;
 }
 
 .analisis h2 {
-    color: #2c3e50;
+    color: #0b549c;
     margin-bottom: 15px;
 }
 
 .analisis p {
     margin-bottom: 10px;
     line-height: 1.6;
-    color: #34495e;
+    color: #030303;
 }

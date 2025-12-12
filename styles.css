@@ -1,0 +1,395 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #060606 0%, #e40707 100%);
+    min-height: 100vh;
+}
+.navegacion {
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    color: #ffd1dc;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Pseudoclase :hover en enlaces - Color rosa fucsia */
+.menu a:hover {
+    background-color: #be0f0f;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 3, 3, 0.5);
+}
+
+/* Pseudoclase :active en enlaces */
+.menu a:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(161, 10, 10, 0.5);
+}
+
+/* Pseudoclase :focus en enlaces */
+.menu a:focus {
+    outline: 2px solid #ffd1dc;
+    outline-offset: 4px;
+}
+
+/* Pseudoelemento ::after para línea decorativa */
+.menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #840404;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Header con imagen de fondo */
+header {
+    background-image: linear-gradient(rgba(241, 9, 9, 0.7), rgba(14, 14, 14, 0.8)), 
+                      url('../imagenes/elfen lied.jpg');
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: #990303 0 0 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+/* Pseudoelemento ::before en header */
+header::before {
+    content: "";
+    position: absolute;
+    font-size: 8rem;
+    opacity: 0.15;
+    top: -20px;
+    right: 50px;
+    transform: rotate(15deg);
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+}
+
+/* Pseudoclase :first-child en subtitulo */
+header p:first-child {
+    font-style: italic;
+}
+
+.subtitulo {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Main */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Sections */
+section {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pseudoclase :hover en sections */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(227, 136, 136, 0.3);
+}
+
+section h2 {
+    color: #0b0304;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    border-bottom: 3px solid #cf2828;
+    padding-bottom: 0.5rem;
+}
+
+/* Pseudoelemento ::first-letter en párrafos de introducción */
+.introduccion p::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    float: left;
+    line-height: 1;
+    margin-right: 0.1rem;
+}
+
+/* Sección Resumen */
+.resumen p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Pseudoelemento ::first-line en el primer párrafo del resumen */
+.resumen p:first-of-type::first-line {
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Articles - Personajes con imágenes */
+article.personaje {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #000000;
+    border-radius: 5px;
+    position: relative;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.personaje-contenido {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.personaje-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #d51e1e;
+    box-shadow: #2d1a1a 0 0 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* Pseudoclase :hover en imágenes de personajes */
+.personaje-img:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+}
+
+.personaje-info {
+    flex: 1;
+}
+
+/* Pseudoclase :nth-child para alternar colores */
+article.personaje:nth-child(odd) {
+    background: #fff5f8;
+}
+
+article.personaje:nth-child(even) {
+    background: #f0f0f5;
+}
+
+/* Pseudoclase :hover en articles */
+article.personaje:hover {
+    background: #ffe6ef;
+    border-left-width: 8px;
+    transform: translateX(5px);
+}
+
+article.personaje h3 {
+    color: #000000;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Etiquetas */
+.etiqueta {
+    display: inline-block;
+    background: #d11111;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Pseudoclase :hover en etiquetas */
+.etiqueta:hover {
+    transform: scale(1.1);
+    background: #ec7575;
+}
+
+/* Lista de temas */
+.lista-temas {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-temas li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: #e24a4a;
+    border-radius: 5px;
+    position: relative;
+    padding-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+/* Pseudoelemento ::before para viñetas personalizadas */
+.lista-temas li::before {
+    content: "▸";
+    color: #890909;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+}
+
+/* Pseudoclase :hover en lista */
+.lista-temas li:hover {
+    background: #ffe6ef;
+    padding-left: 2.5rem;
+}
+
+/* Pseudoclase :first-child en lista */
+.lista-temas li:first-child {
+    border-top: 3px solid #8a1414;
+}
+
+/* Info técnica */
+.info-tecnica {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.info-tecnica p {
+    margin-bottom: 0.8rem;
+}
+
+.info-tecnica strong {
+    color: #950707;
+}
+
+.nota {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #fff5f8;
+    border-left: 4px solid #710404;
+    font-style: italic;
+}
+
+/* Pseudoelemento ::after en nota */
+.nota::after {
+    content: " ♪";
+    color: #040303;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background: #e85f58;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+.credito {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Pseudoclase :focus para accesibilidad */
+section:focus,
+article:focus {
+    outline: 3px solid #010101;
+    outline-offset: 3px;
+}
+
+/* Pseudoclase :active en elementos interactivos */
+.etiqueta:active {
+    transform: scale(0.95);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    header {
+        padding: 3rem 1.5rem;
+        background-attachment: scroll;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitulo {
+        font-size: 1.1rem;
+    }
+    
+    main {
+        padding: 0 1rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .personaje-contenido {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .personaje-img {
+        width: 120px;
+        height: 120px;
+    }
+}

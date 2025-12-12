@@ -18,10 +18,10 @@ body {
 
 /* Contenedor principal */
 .container {
-  background: white;
+  background: #f37171;
   border-radius: 20px;
   padding: 40px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: #000 0 0 30px;
   max-width: 800px;
   width: 100%;
 }
@@ -53,7 +53,7 @@ h1 {
   background: #f8f9fa;
   padding: 25px;
   border-radius: 12px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid #f33939;
 }
 
 .button-title {
@@ -74,7 +74,10 @@ h1 {
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 600;
+  box-shadow: #000000 0 0 30px;
+  
 }
+
 
 .btn-hover:hover {
   background: #e74c3c;
@@ -93,6 +96,7 @@ h1 {
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 600;
+  box-shadow: #5f03bc 0 0 30px;
 }
 
 .btn-focus:focus {
@@ -114,6 +118,7 @@ h1 {
   cursor: pointer;
   transition: all 0.1s ease;
   font-weight: 600;
+  box-shadow: #e0055d 0 0 30px;
 }
 
 .btn-active:active {
